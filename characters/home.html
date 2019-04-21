@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet"  href="home.css">
+    <title></title>
+</head>
+<body >
+       
+    <div class="avatars"> 
+    <table class="one"> 
+  
+        <tr class="photos">
+          <tr> <td colspan="3" id=""><h2>Choose your character!</h2>  </td></tr>
+          <td><img id="avatar1" class="characters" src="http://www.owlboygame.com/gifs/otus/otus_flyX2.gif" width="250px"></td>
+          <td><img id="avatar2" class="characters" src="https://talenthouse-res.cloudinary.com/image/upload/c_limit,w_500,h_500/v1/articles/dkxeiedwwcawxu0sijo7" width="250px" height="200px"></td>
+      </table>
+    </div>
+    
+    <img src="help_1-512.PNG" id="helpIcon" width="100px">
+    <form action="../levels/home.html" id="form">
+
+          <button id="start" type="submit" > Select Level</button>
+    </form>
+    <div id="help">
+      <table class="instructions">
+      <th > How to play ? </th>
+     <tr>
+         <td>
+              <p>  When you start, your character will move automatically<br>
+                     You should use the arrows to move up or down and space to stay still.<br>
+                  The more you press the faster the character goes.<br>
+                  Survive as long as you can and Good luck!
+              </p>
+         </td>
+         <td>
+            <video width="400" height="240" controls>
+                <source src="Dz04.mp4" type="video/mp4">
+                
+              </video>
+         </td>
+     </tr>
+      </table>  
+    
+  
+  </div>
+  <!-- <div id="popUP">
+    <P> you must choose <br>character
+       From the characters<br> listed above<br>
+     </p>
+        
+  </div> -->
+  <div id="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        choose character first!!
+    </div>
+  <script src="home.js"></script>
+ 
+  </body>
+</html>
