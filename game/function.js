@@ -44,7 +44,7 @@ function characters(x,y){
     }
     this.calculateScore = function(pipe_x_coor){
     
-        if(this.x ==pipe_x_coor+pipeUp.width*1.5-130){
+        if(this.x ==pipe_x_coor+pipeUp.width*2){
             new_score++;
             score.innerHTML = "<strong>SCORE: "+new_score+"</strong>";
         }
