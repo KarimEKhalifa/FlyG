@@ -1,9 +1,5 @@
 //////////////////////////////////////////////////////////Declarations//////////////////////////////////////////////////////////////////////
-window.onload = window.onresize = function() {
-    var canvas = document.getElementById('canvas');
-    canvas.width = window.innerWidth * 0.8;
-    canvas.height = window.innerHeight * 0.8;
-}
+const canvas = document.getElementById("canvas");
 const context = canvas.getContext('2d');
 const score = document.getElementById("score");
 const gameover = document.getElementById("gameover");
@@ -24,9 +20,9 @@ function draw(level){
 
     levelChosen(level)
 
-    //fly.play();
+    fly.play();
     
-    context.drawImage(background,0,0,canvas.width,canvas.height);
+    context.drawImage(background,0,0,1000,649);
     for( var i=0; i<pipes.length;i++){
         
         
@@ -42,7 +38,7 @@ function draw(level){
         pipes[i].x-=speed;
     }
 
-        context.drawImage(forground,0,canvas.height-90)
+        context.drawImage(forground,0,565)
 
 
 
@@ -51,8 +47,8 @@ function draw(level){
         context.drawImage(char,charac.x,charac.y);
     
 
-        charac.y+=dirYUp;
-        charac.y+=dirYDown;
+    charac.y+=dirYUp;
+    charac.y+=dirYDown;
         if(!GAME_OVER){
             
         requestAnimationFrame(draw);
@@ -62,19 +58,19 @@ function draw(level){
 function levelChosen(level){
     switch(level){
         case 1:
-            lvl = canvas.width/2-100;
+            lvl = 350;
             speed = 5;
             break;
         case 2:
-            lvl = canvas.width/2+100;
+            lvl = 450;
             speed = 5;
             break;
         case 3:
-            lvl = canvas.width/2+300;
+            lvl = 500;
             speed = 10;
             break;
         case 4:
-            lvl = canvas.width/2+400;
+            lvl = 600;
             speed = 10;
             break;
         default:
@@ -89,5 +85,5 @@ var charID = localStorage.getItem("characterId");
 if(charID == 2){
     charDisp.src="https://talenthouse-res.cloudinary.com/image/upload/c_limit,w_500,h_500/v1/articles/dkxeiedwwcawxu0sijo7";
 }
-console.log(levelPassed)
+console.log(charID);
 draw(parseInt(levelPassed));
