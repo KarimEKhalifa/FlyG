@@ -43,7 +43,7 @@ function draw(level){
 
 
         char.src="images/char"+charID+"/frame_"+Math.ceil(cIter/6)+".png";
-        cIter=(cIter%60)+1;
+        cIter=(cIter%30)+1;
         context.drawImage(char,charac.x,charac.y);
     
 
