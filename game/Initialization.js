@@ -9,7 +9,7 @@ var lose=new Audio();
 
 var charID = localStorage.getItem("characterId");
 
-console.log(charID);
+
 background.src="images/bg2.jpg";
 forground.src="images/fg.jpg"
 pipeUp.src="images/pipeup.png";
